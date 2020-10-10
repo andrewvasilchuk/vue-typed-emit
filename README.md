@@ -2,6 +2,16 @@
 
 > TypeScript utility type for Vue.js `$emit`
 
+[![BuildStatus](https://img.shields.io/github/workflow/status/andrewvasilchuk/vue-typed-emit/Integration)](https://github.com/andrewvasilchuk/vue-typed-emit/actions?query=workflow%3AIntegration)
+[![Version](https://img.shields.io/npm/v/vue-typed-emit)](https://www.npmjs.com/package/vue-typed-emit)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/vue-typed-emit)](https://bundlephobia.com/result?p=vue-typed-emit)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a12c2d8dbd44f028aacddb254df983d)](https://www.codacy.com/gh/andrewvasilchuk/vue-typed-emit/dashboard?utm_source=github.com&utm_medium=referral&utm_content=andrewvasilchuk/vue-typed-emit&utm_campaign=Badge_Grade)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/andrewvasilchuk/vue-typed-emit.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/andrewvasilchuk/vue-typed-emit/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/andrewvasilchuk/vue-typed-emit.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/andrewvasilchuk/vue-typed-emit/context:javascript)
+[![Downloads](https://img.shields.io/npm/dt/vue-typed-emit)](https://www.npmjs.com/package/vue-typed-emit)
+[![LastCommit](https://img.shields.io/github/last-commit/andrewvasilchuk/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/commits/master)
+[![License](https://img.shields.io/npm/l/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/blob/master/LICENSE)
+
 ## Installation
 
 ### Via NPM
