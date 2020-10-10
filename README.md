@@ -30,6 +30,7 @@ $ yarn add vue-typed-emit --dev
 
 ```ts
 import Vue from 'vue'
+// import type { WithEvents } from 'vue-typed-emit' TypeScript 3.8+
 import { WithEvents } from 'vue-typed-emit'
 
 interface Events {
@@ -38,7 +39,7 @@ interface Events {
   baz: undefined
 }
 
-export default (Vue as WithEvents<Refs>).extend({
+export default (Vue as WithEvents<Events>).extend({
   name: 'Component',
   methods: {
     method() {
@@ -70,8 +71,8 @@ export default Vue.extend({
 // ...
 import YourAwesomeExtendedComponent from 'path/to/your/awewsome/extended/component'
 
-export default (YourAwesomeExtendedComponent as WithRefs<
-  Refs,
+export default (YourAwesomeExtendedComponent as WithEvents<
+  WithEvents,
   typeof YourAwesomeExtendedComponent
 >).extend({})
 ```
