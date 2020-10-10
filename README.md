@@ -70,7 +70,7 @@ export default (YourAwesomeExtendedComponent as WithRefs<
 
 ## Motivation
 
-If your project is written using TypeScript + Vue.js, likely your components have some "contracts" – props they receive and events they emit. `vue-typed-emit` is aimed to ensure that you components adhere to the contract they claimed when it comes to events emitting and corresponding payloads.
+If your project is written using TypeScript + Vue.js, likely your components have some "contracts" – props they receive and events they emit. `vue-typed-emit` is aimed to ensure that your components adhere to the contract they claimed when it comes to events emitting and corresponding payloads.
 
 ## Tests
 
