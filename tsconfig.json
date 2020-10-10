@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "pretty": true,
+    "strict": true,
+    "moduleResolution": "Node",
+  }
+}

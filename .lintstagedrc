@@ -1,0 +1,6 @@
+{
+  "*": ["eclint check"],
+  "*.{ts,md}": ["prettier"],
+  "package.json": ["sort-package-json --check"],
+  "*.md": ["remark"]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "vue-typed-emit",
+  "version": "1.0.0",
+  "private": false,
+  "description": "TypeScript utility type for Vue.js $emit",
+  "keywords": [
+    "emit",
+    "types",
+    "typescript",
+    "vue"
+  ],
+  "homepage": "https://github.com/andrewvasilchuk/vue-typed-emit#readme",
+  "bugs": {
+    "url": "https://github.com/andrewvasilchuk/vue-typed-emit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewvasilchuk/vue-typed-emit.git"
+  },
+  "license": "MIT",
+  "author": "Andrew Vasilchuk <andrew.d.vasilchuk@gmail.com>",
+  "contributors": [
+    {
+      "name": "Andrew Vasylchuk",
+      "email": "andrew.d.vasilchuk@gmail.com"
+    }
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf .dist/* && tsc ./src/index.ts --outDir ./dist --declaration",
+    "fmt": "npm run fmt:prettier && npm run fmt:package-json",
+    "fmt:package-json": "sort-package-json",
+    "fmt:prettier": "prettier --write ./**/*.{ts,md}",
+    "lint": "npm run lint:eclint && npm run lint:package-json && npm run lint:prettier && npm run lint:remark",
+    "lint:eclint": "eclint check",
+    "lint:package-json": "sort-package-json --check",
+    "lint:prettier": "prettier --check ./**/*.{ts,md}",
+    "lint:remark": "remark .",
+    "prepare": "npm run build",
+    "test": "dtslint --localTs node_modules/typescript/lib --expectOnly ./tests"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "dtslint": "^4.0.4",
+    "eclint": "^2.8.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "remark-cli": "^8.0.1",
+    "remark-lint": "^7.0.1",
+    "remark-preset-lint-recommended": "^4.0.1",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^1.46.0",
+    "typescript": "^4.0.3",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "peerDependencies": {
+    "typescript": ">=3.8",
+    "vue": ">=2.x"
+  }
+}
