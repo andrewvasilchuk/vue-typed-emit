@@ -28,6 +28,8 @@ $ yarn add vue-typed-emit --dev
 
 ### Usage
 
+### Options API
+
 ```ts
 import Vue from 'vue'
 // import type { WithEvents } from 'vue-typed-emit' TypeScript 3.8+
@@ -78,6 +80,33 @@ export default (YourAwesomeExtendedComponent as WithEvents<
 ```
 
 </details>
+
+### Composition API
+
+```ts
+import { SetupContext, defineComponent } from '@vue/composition-api'
+// import type { CompositionAPIEmit } from 'vue-typed-emit' TypeScript 3.8+
+import { CompositionAPIEmit } from 'vue-typed-emit'
+
+interface Events {
+  foo: string
+  bar: [string, number]
+  baz: undefined
+}
+
+interface ExtendedSetupContext extends SetupContext {
+  emit: CompositionAPIEmit<Events>
+}
+
+export default defineComponent({
+  name: 'Component',
+  setup(props, { emit }: ExtendedSetupContext) {
+    emit('foo', 'foo')
+    emit('bar', 0)
+    emit('baz')
+  },
+})
+```
 
 ## Motivation
 

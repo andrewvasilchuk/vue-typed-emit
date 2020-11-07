@@ -47,6 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@vue/composition-api": "^1.0.0-beta.19",
     "dtslint": "^4.0.4",
     "eclint": "^2.8.1",
     "husky": "^4.3.0",

@@ -1,6 +1,8 @@
 import type Vue from 'vue'
 
-export interface Emit<T extends Record<string, any | any[]>> {
+import type { Events } from './events'
+
+export interface GenericEmit<T extends Events, R extends Vue | void> {
   <K extends keyof T>(
     eventName: K,
     ...args: T[K] extends undefined
@@ -8,5 +10,5 @@ export interface Emit<T extends Record<string, any | any[]>> {
       : T[K] extends Array<any>
       ? T[K]
       : [T[K]]
-  ): Vue
+  ): R
 }
