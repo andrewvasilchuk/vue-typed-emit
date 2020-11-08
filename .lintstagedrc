@@ -1,5 +1,5 @@
 {
-  "*": ["eclint check"],
+  "*": ["editorconfig-checker"],
   "*.{ts,md}": ["prettier"],
   "package.json": ["sort-package-json --check"],
   "*.md": ["remark"]
