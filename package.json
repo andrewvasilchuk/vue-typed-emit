@@ -40,7 +40,7 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --check ./**/*.{ts,md}",
-    "lint:remark": "remark .",
+    "lint:remark": "remark {.,.github}",
     "prepare": "npm run build",
     "test": "dtslint --localTs node_modules/typescript/lib --expectOnly ./tests"
   },
