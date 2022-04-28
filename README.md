@@ -75,10 +75,12 @@ export default Vue.extend({
 // ...
 import YourAwesomeExtendedComponent from 'path/to/your/awewsome/extended/component'
 
-export default (YourAwesomeExtendedComponent as WithEvents<
-  WithEvents,
-  typeof YourAwesomeExtendedComponent
->).extend({})
+export default (
+  YourAwesomeExtendedComponent as WithEvents<
+    WithEvents,
+    typeof YourAwesomeExtendedComponent
+  >
+).extend({})
 ```
 
 </details>

@@ -11,4 +11,5 @@ insert_final_newline = true
 
 [{Makefile,**.mk}]
 # Use tabs for indentation (Makefiles require tabs)
+indent_size = 4
 indent_style = tab
