@@ -12,6 +12,8 @@
 [![LastCommit](https://img.shields.io/github/last-commit/andrewvasilchuk/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/commits/master)
 [![License](https://img.shields.io/npm/l/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/blob/master/LICENSE)
 
+> ❗ This library is intended to be used with Vue 2. Vue 3 [provided a way to type emits](https://vuejs.org/guide/typescript/composition-api.html#typing-component-emits)
+
 ## Installation
 
 ### Via NPM
@@ -111,6 +113,18 @@ export default defineComponent({
 ## Motivation
 
 If your project is written using TypeScript + Vue.js, likely your components have some "contracts" – props they receive and events they emit. `vue-typed-emit` is aimed to ensure that your components adhere to the contract they claimed when it comes to events emitting and corresponding payloads.
+
+## Caveats
+
+### Array payload
+
+If event payload is type of of `Array` it should be defined this way.
+
+```ts
+interface Events {
+  foo: [string[]]
+}
+```
 
 ## Tests
 
