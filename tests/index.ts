@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { SetupContext, defineComponent } from '@vue/composition-api'
 
-import { WithEvents, CompositionAPIEmit } from '../src'
+import type { WithEvents, CompositionAPIEmit } from '../src'
 
 interface Events {
   foo: string
@@ -20,25 +20,25 @@ export const OptionsAPIComponent = (Vue as WithEvents<Events>).extend({
   methods: {
     method() {
       this.$emit('foo', 'foo')
-      // $ExpectError
+      // @ts-expect-error
       this.$emit('foo', 1)
       this.$emit('bar')
-      // $ExpectError
+      // @ts-expect-error
       this.$emit('bar', 'bar')
       this.$emit('baz', 'baz', 256)
-      // $ExpectError
+      // @ts-expect-error
       this.$emit('baz', true, {})
     },
   },
   setup(props, { emit }: ExtendedSetupContext) {
     emit('foo', 'foo')
-    // $ExpectError
+    // @ts-expect-error
     emit('foo', 1)
     emit('bar')
-    // $ExpectError
+    // @ts-expect-error
     emit('bar', 'bar')
     emit('baz', 'baz', 256)
-    // $ExpectError
+    // @ts-expect-error
     emit('baz', true, {})
   },
 })
@@ -61,13 +61,13 @@ export const CompositionAPIComponent = defineComponent({
   },
   setup(props: Props, { emit }: ExtendedSetupContext) {
     emit('foo', 'foo')
-    // $ExpectError
+    // @ts-expect-error
     emit('foo', 1)
     emit('bar')
-    // $ExpectError
+    // @ts-expect-error
     emit('bar', 'bar')
     emit('baz', 'baz', 256)
-    // $ExpectError
+    // @ts-expect-error
     emit('baz', true, {})
   },
 })
