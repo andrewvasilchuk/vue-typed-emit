@@ -8,7 +8,7 @@ export interface GenericEmit<T extends Events, R extends Vue | void> {
     ...args: T[K] extends undefined
       ? [undefined?]
       : T[K] extends Array<any>
-      ? T[K]
-      : [T[K]]
+        ? T[K]
+        : [T[K]]
   ): R
 }

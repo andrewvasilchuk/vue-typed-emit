@@ -6,9 +6,10 @@ import type { OptionsAPIEmit } from './options-api-emit'
 
 export type WithEvents<
   E extends Events,
-  C extends VueConstructor<any> = VueConstructor<Vue>
-> = C extends VueConstructor<infer V>
-  ? VueConstructor<Omit<V, '$emit'> & { $emit: OptionsAPIEmit<E, V> }>
-  : never
+  C extends VueConstructor<any> = VueConstructor<Vue>,
+> =
+  C extends VueConstructor<infer V>
+    ? VueConstructor<Omit<V, '$emit'> & { $emit: OptionsAPIEmit<E, V> }>
+    : never
 
 export { CompositionAPIEmit } from './composition-api-emit'

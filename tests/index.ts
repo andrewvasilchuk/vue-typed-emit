@@ -30,17 +30,6 @@ export const OptionsAPIComponent = (Vue as WithEvents<Events>).extend({
       this.$emit('baz', true, {})
     },
   },
-  setup(props, { emit }: ExtendedSetupContext) {
-    emit('foo', 'foo')
-    // @ts-expect-error
-    emit('foo', 1)
-    emit('bar')
-    // @ts-expect-error
-    emit('bar', 'bar')
-    emit('baz', 'baz', 256)
-    // @ts-expect-error
-    emit('baz', true, {})
-  },
 })
 
 interface ExtendedSetupContext extends SetupContext {

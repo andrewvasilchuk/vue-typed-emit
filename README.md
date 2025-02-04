@@ -10,7 +10,7 @@
 [![LastCommit](https://img.shields.io/github/last-commit/andrewvasilchuk/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/commits/master)
 [![License](https://img.shields.io/npm/l/vue-typed-emit)](https://github.com/andrewvasilchuk/vue-typed-emit/blob/master/LICENSE)
 
-> ❗ This library is intended to be used with Vue `<=2.6.14` (`emits` option was backported in Vue `2.7`). Vue 3 [provided a way to type emits](https://vuejs.org/guide/typescript/composition-api.html#typing-component-emits).
+> ❗ This library is intended to be used with Vue `<3`. Vue 3 [provided a way to type emits](https://vuejs.org/guide/typescript/composition-api.html#typing-component-emits).
 
 ## Installation
 
